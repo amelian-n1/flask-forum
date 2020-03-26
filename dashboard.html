@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard_style.css') }}">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <nav>
+            <h1>Flask</h1>
+            <ul>
+                <li><p>Welcome, {{this_user['first_name']}}!</p> 
+                <li><p><a href="/logout">Log Out</a></p>
+            </ul>
+        </nav>
+        <div class="newpost">
+        <form action="/message/create" method="POST">
+            <h2>What's on your mind?</h2>
+            <textarea name="message" rows="5" cols="121">Don't hold back...</textarea>
+            <input type="submit" value="Post">
+        </form>
+        </div>
+        <div class="feed">
+            <h2>My Feed</h2>
+    
+        {% for message in all_messages %}
+            
+            <p><span class="username">{{message['first_name']}} {{message['last_name']}}</span><span class="time"> · {{message['created_at']}}</span></p>
+            <p>{{message['content']}}</p>
+    
+            {% if session['user_id']==message['user_id'] %}
+                <a class="delete1" href='/message/{{message.id}}/delete'><button>Delete</button></a>
+            {% endif %}
+    
+            <form action="/message/{{message.id}}/comment" method="POST">
+                <textarea name="comment" rows="3" cols="118">Leave a comment...</textarea>
+                <input type="submit" value="Post">
+            </form>
+            <div class="comment">
+            {% for comment in all_comments %}
+                {% if message['id']==comment['message_id'] %}
+                    <p><span class="username">{{comment['first_name']}} {{comment['last_name']}}</span><span class="time"> · {{comment['created_at'].strftime("%b %d %Y %H:%M:%S")}}</span></p>
+                    <p>{{comment['content']}}</p>
+                    
+                    {% if session['user_id']==comment['user_id'] %}
+                        <a class="delete2" href='/comment/{{comment.id}}/delete'><button>Delete</button></a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            </div>
+    
+            <hr>
+            
+        {% endfor %}
+        </div>
+    </body>
+    </html>

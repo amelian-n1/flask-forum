@@ -1,0 +1,129 @@
+html{
+    font-family: sans-serif;
+    background: #eee;
+    padding: 1rem;
+}
+body {
+    width: 50em;
+    margin: 0 auto;
+}
+nav {
+    background: #D3D3D3;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+nav ul{
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+}
+nav ul li{
+    display: block;
+    padding: 0.5rem;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: #377ba8;
+}
+nav h1{
+    font-family: serif;
+    color: #377ba8;
+    background-color: #D3D3D3;
+    font-size: 30px;
+    padding: 1rem 1rem 1rem 0;
+    margin: 0;
+    flex: auto;
+}
+form{
+    padding: 1rem;
+}
+.newpost h2{
+    padding: 0 0 1rem 0;
+    margin: 0;
+    font-family: serif;
+    color: #377ba8;
+    font-size: 20px;
+    font-weight: bold;
+}
+.newpost textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+.newpost input[type=submit]{
+    align-self: start;
+    width: 7em;
+    margin: .5em 0 .5em 56em;
+    padding: .5em;
+    color: white;
+    background: #377ba8;
+    font-family: serif;
+    font-size: 12px;
+}
+.newpost{
+    background-color: white;
+}
+.newpost p{
+    font-family: serif;
+}
+.feed{
+    background-color: white;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+}
+.feed h2{
+    padding: 0 0 1rem 0;
+    margin: 0;
+    font-family: serif;
+    color: #377ba8;
+    font-size: 20px;
+    font-weight: bold;
+}
+.time{
+    color:lightgray
+}
+.username{
+    font-weight: bold;
+}
+.feed input[type=submit]{
+    width: 7em;
+    color: white;
+    padding: .5em;
+    background: #377ba8;
+    font-family: serif;
+    font-size: 12px;
+    margin: .5em 0 .5em 55em;
+}
+.feed textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+.delete1 button{
+    width: 7em;
+    color: white;
+    padding: .5em;
+    background: #377ba8;
+    font-family: serif;
+    font-size: 12px;
+    margin: .5em 0 .5em 56em;
+}
+.delete2 button{
+    width: 7em;
+    color: white;
+    padding: .5em;
+    background: #377ba8;
+    font-family: serif;
+    font-size: 12px;
+    margin: .5em 0 .5em 52em;
+}
+.comment{
+    padding: 0 0 0 3rem;
+}
