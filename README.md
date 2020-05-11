@@ -2,7 +2,19 @@
 
 ## Description
 
-This application acts as a simple message board where users must register and login to post messages and comment on messages.
+This application acts as a simple message board where users register and login to post messages and comment on messages.
+
+<p align="center"> <img src="images/login.png" width="500"> </p>
+
+User registers an account with email address and password. Password is encrypted and stored in the MySQL database. Once the account is created, user can login.
+
+<p align="center"> <img src="images/post.png" width="500"></p>
+
+User can post a message that will display to all users on the platform.
+
+<p align="center"> <img src="images/feed.png" width="500"></p>
+
+User can comment on messages to communicate with other users. They can delete their own comments and posts if needed.
 
 ## Built With
 Python, MySQL, Flask, HTML, CSS
